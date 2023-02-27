@@ -13,7 +13,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.1);
+  background: #5c258d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4389a2,
+    #5c258d
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4389a2,
+    #5c258d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 button {
@@ -50,21 +60,27 @@ button {
   background-color: rgb(57, 57, 226);
 }
 
+#new:hover {
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+color: black;
+}
+
 .divTable {
   padding: 10px;
-  width: auto; 
-  height:inherit; 
-  overflow:auto;
+  width: auto;
+  height: inherit;
+  overflow: auto;
 }
 
 .divTable::-webkit-scrollbar {
   width: 12px;
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
 }
 
 .divTable::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: darkgray; 
+  background-color: darkgray;
 }
 
 table {
@@ -79,7 +95,7 @@ thead {
 }
 
 tr {
-  border-bottom: 1px solid rgb(238, 235, 235)!important;
+  border-bottom: 1px solid rgb(238, 235, 235) !important;
 }
 
 tbody tr td {
@@ -99,7 +115,7 @@ tbody tr {
 }
 
 thead tr th.acao {
-  width: 100px!important;
+  width: 100px !important;
   text-align: center;
 }
 
@@ -111,7 +127,7 @@ tbody tr td.acao {
   body {
     font-size: 10px;
   }
-  
+
   .header span {
     font-size: 15px;
   }
@@ -122,11 +138,11 @@ tbody tr td.acao {
   }
 
   thead tr th.acao {
-    width: auto!important;
+    width: auto !important;
   }
-  
+
   td button i {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 
   td button i:first-child {
@@ -134,11 +150,11 @@ tbody tr td.acao {
   }
 
   .modal {
-    width: 90%!important;
+    width: 90% !important;
   }
 
   .modal label {
-    font-size: 12px!important;
+    font-size: 12px !important;
   }
 }
 
@@ -173,7 +189,7 @@ tbody tr td.acao {
 .modal input {
   width: 100%;
   outline: none;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   width: 100%;
   margin-bottom: 20px;
   border-top: none;
@@ -185,12 +201,18 @@ tbody tr td.acao {
   width: 100%;
   margin: 10px auto;
   outline: none;
-  border-radius: 20px; 
-  padding: 5px 10px; 
+  border-radius: 20px;
+  padding: 5px 10px;
   width: 100%;
   border: none;
   background-color: rgb(57, 57, 226);
   color: white;
+}
+
+.modal button:hover {
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+color: black;
 }
 
 .active {
@@ -198,7 +220,7 @@ tbody tr td.acao {
 }
 
 .active .modal {
-  animation: modal .4s;
+  animation: modal 0.4s;
 }
 
 @keyframes modal {
